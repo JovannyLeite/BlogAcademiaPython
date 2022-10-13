@@ -8,11 +8,15 @@
     <h2>Lista de Posts Cadastrados</h2>
 
    <ul>
-      {% for post in posts %}
+      <{% for post in posts %}
             <a href="{% url 'post_detail' post.id %}"> {{post.titulo}} - {{post.autor}}</a>
             <br/>
-       {% endfor %}
+       {% endfor %}>
    </ul>
+
+    {% load static %}
+    <img src="{% static 'blog/imagem.jpg' %}">
+
 
 </body>
 </html>
